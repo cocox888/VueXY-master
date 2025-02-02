@@ -16,9 +16,6 @@
  * Another way is to clear the cookie from the browser's Application/Storage tab and then reload the page.
  */
 
-// Third-party Imports
-import type { ToastPosition } from 'react-toastify'
-
 // Type Imports
 import type { Mode, Skin, Layout, LayoutComponentPosition, LayoutComponentWidth } from '@core/types'
 
@@ -50,16 +47,15 @@ export type Config = {
   compactContentWidth: number
   footer: Footer
   disableRipple: boolean
-  toastPosition: ToastPosition
 }
 
 const themeConfig: Config = {
   templateName: 'Vuexy',
-  homePageUrl: '/dashboards/crm',
+  homePageUrl: '/home',
   settingsCookieName: 'vuexy-mui-next-demo-1',
   mode: 'system', // 'system', 'light', 'dark'
   skin: 'default', // 'default', 'bordered'
-  semiDark: true, // true, false
+  semiDark: false, // true, false
   layout: 'vertical', // 'vertical', 'collapsed', 'horizontal'
   layoutPadding: 24, // Common padding for header, content, footer layout components (in px)
   compactContentWidth: 1440, // in px
@@ -76,8 +72,7 @@ const themeConfig: Config = {
     contentWidth: 'compact', // 'compact', 'wide'
     detached: true //! true, false (This will not work in the Horizontal Layout)
   },
-  disableRipple: false, // true, false
-  toastPosition: 'top-right' // 'top-right', 'top-center', 'top-left', 'bottom-right', 'bottom-center', 'bottom-left'
+  disableRipple: false // true, false
 }
 
 export default themeConfig
